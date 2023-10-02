@@ -66,3 +66,5 @@ app.get('/api/images', (req: Request, res: Response) => {
 });
 
 app.listen(3000, () => console.log('Server running'));
+
+export default app;

@@ -4,7 +4,8 @@
   "description": "API to place images into a frontend with the size set via URL parameters and to serve properly scaled versions of images to the front end to reduce page load size. The project will use Node, Express, TypeScript, Jasmine, Eslint, and Prettier",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "jasmine": "jasmine",
+    "test": "npm run build && npm run jasmine",
     "build": "npx tsc && cp -R src/images build/",
     "start": "cd build && node index.js",
     "lint": "eslint . --ext .ts",
@@ -41,7 +42,9 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "jasmine": "^5.1.0",
+    "jasmine-spec-reporter": "^7.0.0",
     "prettier": "3.0.1",
+    "supertest": "^6.3.3",
     "typescript": "^5.1.6"
   }
 }
